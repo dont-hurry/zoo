@@ -1,0 +1,619 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+p, mark, label {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+header {
+  /*background: red;*/
+  background: url("../img/header.jpg") center center / cover;
+  text-align: center; /* 為了使`header .heading`置中 */
+}
+
+#overlay {
+  background: rgba(0, 0, 0, .7);
+  padding: 2rem 0 2.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  #overlay {
+    padding: 2.8rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #overlay {
+    padding: 3.2rem 0 2.6rem;
+  }
+}
+
+header .heading {
+  /*background: orange;*/
+  display: inline-block;  /* 為了使作者名字與標題靠右對齊 */
+  margin-bottom: 1.05rem;
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  header .heading {
+    margin-bottom: 1.2rem;
+  }
+}
+
+header .heading h1 {
+  color: #fff;
+  font: 3.2rem 'Noto Serif TC', serif;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+
+@media screen and (min-width: 768px) {
+  header .heading h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .heading h1 {
+    font-size: 4.8rem;
+  }
+}
+
+/* 作者名稱 */
+header .heading p {
+  color: #fff;
+  font-size: .9rem;
+}
+
+@media screen and (min-width: 768px) {
+  header .heading p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .heading p {
+    font-size: 1.4rem;
+  }
+}
+
+#header-intro {
+  /*background: green;*/
+  margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #header-intro {
+    margin-bottom: 2.2rem;
+  }
+}
+
+#header-intro mark {
+  background: rgba(255, 199, 64, .85);
+  color: #000;
+  font-size: 1.1rem;
+  line-height: 225%;
+  padding: .1rem;
+}
+
+@media screen and (min-width: 768px) {
+  #header-intro mark {
+    font-size: 1.2rem;
+    line-height: 265%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #header-intro mark {
+    font-size: 1.4rem;
+  }
+}
+
+header img {
+  display: block;
+  max-width: 55%;
+  margin: 0 auto;
+  padding-bottom: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  header img {
+    max-width: 40%;
+    padding-bottom: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header img {
+    max-width: 30%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+  50%{
+    transform: scale(1,1.05) translate(0px, -5px);
+  }
+}
+
+#overlay a {
+  animation: bounce 1s infinite;
+  background: rgba(148, 199, 34, .8);
+  color: #fff;
+  display: inline-block;
+  font: 1.2rem 'Noto Sans TC', sans-serif;
+  padding: .4rem .65rem;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+  transition: all .2s;
+}
+
+@media screen and (min-width: 768px) {
+  #overlay a {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #overlay a {
+    font-size: 1.6rem;
+  }
+}
+
+#overlay a:hover {
+  background: #94c722;
+}
+
+#test-section {
+  color: #fff;
+  padding: 2.4rem 1.2rem 2rem;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  #test-section {
+    padding: 3rem 2rem 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #test-section {
+    padding: 4rem 4rem 4.4rem;
+  }
+}
+
+#test-section h2 {
+  background: #6df0c2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  color: #141c3a;
+  display: inline-block;
+  font: 1.8rem 'Noto Serif TC', serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: .1rem .4rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #test-section h2 {
+    font-size: 2rem;
+    padding: .2rem .5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #test-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+#test-section p.section-description {
+  font-size: 1.1rem;
+  line-height: 180%;
+  padding: 0 .5rem 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  #test-section p.section-description {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #test-content {
+    padding: 0 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .question {
+    display: flex;  /* 為了讓left, content水平排列 */
+    padding: .4rem 0;
+    position: relative;
+  }
+
+  .question:before {
+    background: rgba(109, 240, 242, .35);
+    content: '';
+    height: calc(100% - 1.8rem);
+    position: absolute;
+    left: calc(1.8rem - 1px);
+    top: 1.8rem;
+    width: 2px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .question:before {
+    height: calc(100% - 2rem);
+    position: absolute;
+    left: calc(2rem - 1px);
+    top: 2rem;
+    width: 2px;
+  }
+}
+
+.question-left {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .question-left {
+    display: block;
+  }
+
+  .question-left figure {
+    background: #6df0c2;
+    color: #141c3a;
+    border-radius: 50%;
+    font: 1.8rem 'Noto Sans TC', serif;
+    margin: 0;  /* reset */
+    position: relative;
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .question-left figure:before {
+    content: attr(data-initial);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .question-left figure {
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
+.question-content p#question-description {
+  border-top: 2px dashed rgba(255, 255, 255, .15);
+  font-size: 1.3rem;
+  line-height: 145%;
+  margin-bottom: 1.25rem;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .question-content {
+    flex: 1;
+    margin-left: 1.6rem;
+  }
+
+  .question-content p#question-description {
+    border: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.4rem;
+    padding-top: .8rem;
+  }
+
+  .question-content .question-num {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .question-content p#question-description {
+    font-size: 1.55rem;
+    padding-top: .75rem;
+  }
+}
+
+.question-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.question-content input[type=radio] {
+  display: none;
+}
+
+.question-content label {
+  border: 2px solid rgba(109, 240, 242, .45);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, .9);
+  cursor: pointer;
+  display: block;
+  font-size: 1.1rem;
+  line-height: 160%;
+  margin-bottom: 1.1rem;
+  padding: .65rem .8rem;
+  user-select: none;
+}
+
+.question-content label:hover {
+  border: 2px solid #ffc740;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .question-content label {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding: .7rem .8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .question-content label {
+    font-size: 1.25rem;
+    line-height: 180%;
+  }
+}
+
+.question-content input[type=radio]:checked + label {
+  border: 2px solid #ffc740;
+  color: #fff;
+}
+
+#test-content h3 {
+  background: #6df0c2;
+  border-top: 2px dashed rgba(255, 255, 255, .15);
+  color: #000;
+  display: inline-block;
+  font: 1.6rem 'Noto Serif TC', serif;
+  font-weight: bold;
+  margin: .5rem 0 .4rem;
+  padding: .1rem .4rem;
+  text-align: center;
+}
+
+#test-content h4 {
+  color: rgba(255, 255, 255, .85);
+  font: 1.1rem 'Noto Sans TC', serif;
+  margin-bottom: 1rem;
+}
+
+#test-content p.result-content {
+  font-size: 1.1rem;
+  line-height: 160%;
+  margin-bottom: 1rem;
+}
+
+#test-content img {
+  display: block;
+  margin-bottom: 1.2rem;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #test-content h3 {
+    font-size: 1.8rem;
+    padding: .2rem .5rem;
+  }
+
+  #test-content h4 {
+    font-size: 1.25rem;
+  }
+
+  #test-content p.result-content {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+  }
+
+  #test-content img {
+    margin: 0 auto 1.8rem;
+    max-width: 75%;
+  }
+}
+
+#test-content .btn-wrapper {
+  text-align: center;
+}
+
+#test-content .btn-wrapper button {
+  background: rgba(255, 199, 64, .75);
+  border: 0;
+  cursor: pointer;
+  font: 1.1rem 'Noto Sans TC', serif;
+  outline: none;
+  padding: .4rem;
+  transition: all .2s;
+}
+
+#test-content .btn-wrapper button:hover {
+  background: #ffc740;
+}
+
+@media screen and (min-width: 768px) {
+  #test-content .btn-wrapper button {
+    font-size: 1.4rem;
+    padding: .5rem;
+  }
+}
+
+#particles-js-test-section {
+  background: #141c3a;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#video-section {
+  background: #000;
+}
+
+#video-section-1,
+#video-section-2 {
+  /* for YouTube iframe RWD */
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+#video-section-1 iframe,
+#video-section-2 iframe {
+  position: absolute; /* for YouTube iframe RWD */
+  width: 100%;
+  height: 100%;
+}
+
+#book-intro {
+  position: relative;
+}
+
+#book-intro-content {
+  margin: 0 auto;
+  padding: 2rem 1.2rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book-intro-content {
+    padding: 2.4rem 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #book-intro-content {
+    padding: 2.5rem 4rem 2rem;
+  }
+}
+
+#book-intro-content h2 {
+  background: #ffc740;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .05);
+  color: #141c3a;
+  display: inline-block;
+  font: 1.8rem 'Noto Sans TC', serif;
+  margin: .65rem 0 1.2rem;
+  padding: .1rem .4rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book-intro-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    padding: .2rem .5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #book-intro-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+#book-intro-content img {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+  display: block;
+  margin-bottom: .8rem;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #book-intro-content img {
+    margin-bottom: 1.4rem;
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #book-intro-content img {
+    max-width: 50%;
+  }
+}
+
+#book-intro-content p {
+  font-size: 1.1rem;
+  line-height: 165%;
+  text-indent: 2rem;
+  margin-bottom: .8rem;
+}
+
+@media screen and (min-width: 768px) {
+  #book-intro-content p {
+    font-size: 1.25rem;
+    line-height: 170%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #book-intro-content p {
+    font-size: 1.3rem;
+    line-height: 200%;
+  }
+}
+
+#book-intro-content p.recommend {
+  display: block;
+  font-size: 1.2rem;
+  overflow-x: scroll;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+  text-indent: 0;
+  width: 100%;
+  writing-mode: vertical-lr;
+}
+
+
+@media screen and (min-width: 768px) {
+  #book-intro-content p.recommend {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #book-intro-content p.recommend {
+    font-size: 1.4rem;
+  }
+}
+
+#particles-js-book-intro {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+footer {
+  background: #15141f;
+  color: rgba(255, 255, 255, .7);
+  font: 1.1rem 'Noto Sans TC', sans-serif;
+  padding: 1.25rem 0;
+  text-align: center;
+}
